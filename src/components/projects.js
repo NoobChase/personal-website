@@ -3,32 +3,71 @@ import Better from '../media/better.png'
 import Capacity from '../media/production.svg'
 import Person from '../media/businessman.svg'
 import Autocad from '../media/dwg.svg'
+import { useEffect, useState } from 'react'
+import { useSpring, animated } from 'react-spring'
+import {motion, useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
+
+
+
 
 const Projects = (props) =>{
+
     const Project = (props) =>{
+
+      const {ref, inView} = useInView({threshold:.6})
+        const animation = useAnimation()
+        const imageAnimation = useAnimation()
+        useEffect(() => {
+            if(inView){
+                animation.start({
+                    x:0,
+                    transition: {
+                        type: 'spring', duration: 1.5, bounce: .3
+                    }
+                })
+                imageAnimation.start({
+                    opacity:1,
+                    transition:{duration:1.5}
+                })
+            }
+            if(!inView){
+                if(props.count%2 === 0){
+                    animation.start({x: '-50vw'})
+                }
+                else{
+                    animation.start({x: '50vw'})
+                }
+                
+                imageAnimation.start({opacity:0})
+            }
+            console.log('use effect hook, inview = ', inView)
+            //by including inView below when it changes the useEffect will run
+        },[inView])
         if (props.count%2 === 0) {
             return(
-                <div className='project'>
-                    <div className='project-text'>
+                <div ref = {ref} className='project'>
+                    <motion.div className='project-text' animate={animation}>
+
                         <h2>{props.header}</h2>
                         <p>{props.description}</p>
-                    </div>
-                    <div className='project-image'>
+                    </motion.div>
+                    <motion.div className='project-image' animate={imageAnimation}>
                         <img alt = 'project' src={props.image} width = 'auto' height={'auto'}/>
-                    </div>
+                    </motion.div>
                 </div>
             )
         }
         else{
             return(
-                <div className='project'>
-                    <div className='project-image'>
+                <div ref = {ref} className='project'>
+                    <motion.div className='project-image' animate={imageAnimation}>
                         <img alt = 'project' src={props.image} width = 'auto' height={'auto'}/>
-                    </div>
-                    <div className='project-text'>
+                    </motion.div>
+                    <motion.div className='project-text' animate={animation}>
                         <h2>{props.header}</h2>
                         <p>{props.description}</p>
-                    </div>
+                    </motion.div>
                 </div>
             )
         }
@@ -65,7 +104,7 @@ const Projects = (props) =>{
              {
                 programmingProjects.map((project,i) => {
                     return(
-                            <Project header = {project.header} description = {project.description} image = {project.image} count = {i}/> 
+                            <Project header = {project.header} description = {project.description} image = {project.image} count = {i} dataRef = {props.dataRef} triggerRef = {props.triggerRef}/> 
                     )
                 })
             }

@@ -4,8 +4,8 @@ import Education from './components/education'
 import Projects from './components/projects'
 import React, {useState,useEffect,  useRef} from 'react'
 
-
 function App() {
+
   return (
     <div>
       <body>
