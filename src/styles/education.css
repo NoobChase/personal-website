@@ -1,0 +1,19 @@
+.education-section{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    font-size: 3vh;
+}
+.skill h2{
+    text-align: center;
+    font-size: 7vh;
+}
+.education h1{
+    text-align: center;
+}

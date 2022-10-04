@@ -11,3 +11,219 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --bg: #222;
+  --accent: #82FF9E;
+  --text: #FFFFFF;
+}
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+h1{
+  font-size: 100px;
+  font-family: 'Roboto';
+  color: var(--text);
+}
+.intro-header{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+
+}
+.name{
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  align-content:flex-start;
+  
+}
+.firstName{
+  margin-left: 5vw;
+  margin-top: 5%;
+  margin-bottom: 0;
+  animation: leftToRight ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.lastName{
+  margin-left: 5vw;
+  margin-top: 2.5%;
+  margin-bottom: 0;
+  animation: leftToRight ease 3s;
+  animation-iteration-count: 1;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  
+}
+.contacts{
+  width:33%;
+  padding-top: 10px;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--text);
+}
+.contact-item:first-child{
+  margin-left: .5vw;
+}
+.contact-item:nth-child(1){
+  animation: leftToRight ease 3s;
+  animation-iteration-count: 1;
+  animation-delay: .75s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.contact-item:nth-child(2){
+  animation: leftToRight ease 3s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.contact-item:nth-child(3){
+  animation: leftToRight ease 3s;
+  animation-iteration-count: 1;
+  animation-delay: 1.25s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.contact-item{
+  font-size: 5vh;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: 5%;
+}
+.contact-image{
+  background-color: white;
+  border-radius: 5px;
+}
+@keyframes leftToRight {
+  0%{
+    opacity:0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+/*
+.name{
+  display:flex;
+  flex-direction: column;
+  align-content:flex-start;
+}
+.glitch1{
+  position: absolute;
+  top:25%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.glitch2{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.glitch1::before, .glitch1::after{
+  content: 'Chase';
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.glitch1:hover::before{
+  animation: glitch1 .3s linear 6;
+  color: #e91e63;
+  z-index: -2;
+}
+.glitch1:hover::after{
+  animation: glitch1 .3s linear 6 reverse;
+  color: #2196f3;
+  z-index: -1;
+}
+@keyframes glitch1{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  20%{
+    top: -5px;
+    left: -5px;
+  }
+  40%{
+    top: 5px;
+    left: 5px;
+  }
+  60%{
+    top: -5px;
+    left: 5px;
+  }
+  80%{
+    top: 5px;
+    left: -5px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}
+.glitch2::before, .glitch2::after{
+  content: 'Reynolds';
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.name:hover::before{
+  animation: glitch2 .3s linear 6;
+  color: #e91e63;
+  z-index: -2;
+}
+.name:hover::after{
+  animation: glitch2 .3s linear 6 reverse;
+  color: #2196f3;
+  z-index: -1;
+}
+@keyframes glitch2{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  20%{
+    top: -5px;
+    left: -5px;
+  }
+  40%{
+    top: 5px;
+    left: 5px;
+  }
+  60%{
+    top: -5px;
+    left: 5px;
+  }
+  80%{
+    top: 5px;
+    left: -5px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}
+*/
