@@ -25,6 +25,10 @@ h1{
   font-family: 'Roboto';
   color: var(--text);
 }
+h2{
+  font-family: 'Roboto';
+  color: var(--text);
+}
 .intro-header{
   display:flex;
   flex-direction: column;

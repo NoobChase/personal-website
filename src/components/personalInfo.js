@@ -6,7 +6,7 @@ const PersonalInfo = (props) => {
         <div>
             <div className="personal-info-section">
                 <span className='headshot'>
-                    <img alt='headshot' src={Headshot}  height= {"400px"}/>
+                    <img alt='headshot' src={Headshot} />
                 </span>
                 <div className='personal-info'>
                     <h2>Personal Info</h2>

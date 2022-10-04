@@ -4,7 +4,6 @@ import Capacity from '../media/production.svg'
 import Person from '../media/businessman.svg'
 import Autocad from '../media/dwg.svg'
 import { useEffect, useState } from 'react'
-import { useSpring, animated } from 'react-spring'
 import {motion, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 

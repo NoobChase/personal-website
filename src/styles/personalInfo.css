@@ -6,6 +6,10 @@
 .headshot{
     margin-left: 5%;
 }
+.headshot img{
+    height: 40vh;
+    border-radius: 8px;
+}
 .personal-info{
     display: flex;
     flex-direction: column;
