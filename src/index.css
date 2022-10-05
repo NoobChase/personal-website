@@ -69,6 +69,7 @@ h2{
   display: flex;
   flex-direction: row;
   background-color: var(--text);
+  align-items: center;
 }
 .contact-item:first-child{
   margin-left: .5vw;
