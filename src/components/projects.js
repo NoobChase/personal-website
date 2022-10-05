@@ -3,7 +3,7 @@ import Better from '../media/better.png'
 import Capacity from '../media/production.svg'
 import Person from '../media/businessman.svg'
 import Autocad from '../media/dwg.svg'
-import { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import {motion, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 
