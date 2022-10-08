@@ -22,8 +22,50 @@
 .project-text{
     width: 40vw;
     font-size: 3vh;
+    
+}
+.project-text a{
+    color:var(--text);
+}
+.project-image{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 .project-image img{
     width: 40vw;
     border-radius: 8px;
+}
+.project-image button{
+    border: 10px;
+    border-color: var(--text);
+    background-color: var(--bg);
+    color: var(--text);
+    
+    font-size: 5vh;
+
+}
+.image-link img{
+    width: 6vw;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.button-container button{
+    border: 6px solid;
+    border-radius: 8px;
+    padding:5px;
+    border-color: var(--text);
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 5vh;
+    transition: color 1s ease-in;
+    transition: background-color 1s ease-in;
+}
+.button-container button:hover{
+    background-color: var(--text);
+    color: var(--bg);
 }
