@@ -60,17 +60,17 @@ h2{
   animation-delay: .5s;
   animation-fill-mode: forwards;
   opacity: 0;
+  margin-bottom: 3vh;
   
 }
 .contacts{
   width:33%;
-  padding-top: 10px;
   margin-left: 5vw;
   display: flex;
   flex-direction: row;
   background-color: var(--text);
   align-items: center;
-
+  padding: 1vh 0 1vh 0;
 }
 .contact-item:first-child{
   margin-left: .5vw;
@@ -101,6 +101,8 @@ h2{
   color: var(--text);
   text-decoration: none;
   margin-right: 5%;
+  display: flex;
+  align-items: center;
 }
 .contact-image{
   background-color: white;
